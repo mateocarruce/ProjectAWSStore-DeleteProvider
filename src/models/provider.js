@@ -2,6 +2,11 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../database');
 
 const Provider = sequelize.define('Provider', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -18,7 +23,7 @@ const Provider = sequelize.define('Provider', {
         },
     },
 }, {
-    freezeTableName: true, // Evita que Sequelize pluralice el nombre de la tabla
+    freezeTableName: true, // Evita pluralización del nombre de la tabla
 });
 
 module.exports = Provider;

@@ -1,0 +1,14 @@
+type Query {
+    _placeholder: String
+}
+
+type Mutation {
+    deleteProvider(id: ID!): String
+}
+
+type Provider {
+    id: ID!
+    name: String!
+    address: String!
+    email: String!
+}
