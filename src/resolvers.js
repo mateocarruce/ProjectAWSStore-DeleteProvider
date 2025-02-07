@@ -20,6 +20,15 @@ const resolvers = {
                     'http://localhost:5003/sync-delete'  // ✅ Microservicio de Leer
                 ];
 
+             //   const instances = [
+           //         'http://provider-container:5000/sync-delete', // Microservicio de Crear
+         //           'http://provider-update-container:5002/sync-delete', // Microservicio de Editar
+       //             'http://provider-read-container:5003/sync-delete'  // Microservicio de Leer
+      //          ];
+                
+                
+
+
                 for (const instance of instances) {
                     try {
                         const response = await axios.post(instance, { id });
