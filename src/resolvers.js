@@ -14,11 +14,11 @@ const resolvers = {
                 console.log(`✅ Proveedor con ID ${id} eliminado en la base de Eliminar`);
 
                 // ✅ Notificar a los otros microservicios (Crear, Editar y Leer)
-                const instances = [
-                    'http://localhost:5000/sync-delete', // Microservicio de Crear
-                    'http://localhost:5002/sync-delete', // Microservicio de Editar
-                    'http://localhost:5003/sync-delete'  // ✅ Microservicio de Leer
-                ];
+           //     const instances = [
+          //          'http://localhost:5000/sync-delete', // Microservicio de Crear
+         //           'http://localhost:5002/sync-delete', // Microservicio de Editar
+        //            'http://localhost:5003/sync-delete'  // ✅ Microservicio de Leer
+       //         ];
 
              //   const instances = [
            //         'http://provider-container:5000/sync-delete', // Microservicio de Crear
@@ -26,7 +26,12 @@ const resolvers = {
        //             'http://provider-read-container:5003/sync-delete'  // Microservicio de Leer
       //          ];
                 
-                
+      const instances = [
+        'http://3.214.196.129:5000/sync-delete', // Microservicio de Crear
+        'http://98.85.71.57:5002/sync-delete',  // Microservicio de Update
+        'http://13.216.88.188:5003/sync-delete'  // Microservicio de Leer
+    ];
+    
 
 
                 for (const instance of instances) {
