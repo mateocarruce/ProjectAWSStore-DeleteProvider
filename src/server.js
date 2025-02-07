@@ -89,7 +89,7 @@ sequelize.sync().then(() => {
 
     // Inicia Apollo Server (GraphQL)
     server.listen({ port: 4001 }).then(({ url }) => {
-        console.log(`🚀 GraphQL server ready at ${url}`);
+        console.log(`🚀 GraphQL server owo ready at ${url}`);
     });
 
     // Inicia Express Server (REST)
