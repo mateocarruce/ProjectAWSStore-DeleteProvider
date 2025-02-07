@@ -7,6 +7,9 @@ const sequelize = require('./database');
 const resolvers = require('./resolvers');
 const Provider = require('./models/provider');
 
+// ✅ Permitir HTTP en Apollo Server
+process.env.APOLLO_DISABLE_SERVE_OVER_HTTPS = 'true';
+
 // Leer el esquema GraphQL
 const typeDefs = fs.readFileSync(path.join(__dirname, 'schema.graphql'), 'utf-8');
 
@@ -89,7 +92,7 @@ sequelize.sync().then(() => {
 
     // Inicia Apollo Server (GraphQL)
     server.listen({ port: 4001 }).then(({ url }) => {
-        console.log(`🚀 GraphQL server owo ready at ${url}`);
+        console.log(`🚀 GraphQL server ready at ${url}`);
     });
 
     // Inicia Express Server (REST)
